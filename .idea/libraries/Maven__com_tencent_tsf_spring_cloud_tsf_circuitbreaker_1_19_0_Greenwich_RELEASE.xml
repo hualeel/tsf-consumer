@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.tencent.tsf:spring-cloud-tsf-circuitbreaker:1.19.0-Greenwich-RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/buildenv/apache-maven-3.5.4/repository/com/tencent/tsf/spring-cloud-tsf-circuitbreaker/1.19.0-Greenwich-RELEASE/spring-cloud-tsf-circuitbreaker-1.19.0-Greenwich-RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/buildenv/apache-maven-3.5.4/repository/com/tencent/tsf/spring-cloud-tsf-circuitbreaker/1.19.0-Greenwich-RELEASE/spring-cloud-tsf-circuitbreaker-1.19.0-Greenwich-RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/buildenv/apache-maven-3.5.4/repository/com/tencent/tsf/spring-cloud-tsf-circuitbreaker/1.19.0-Greenwich-RELEASE/spring-cloud-tsf-circuitbreaker-1.19.0-Greenwich-RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

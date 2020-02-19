@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.springfox:springfox-spring-web:2.9.2.TSF-RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/buildenv/apache-maven-3.5.4/repository/io/springfox/springfox-spring-web/2.9.2.TSF-RELEASE/springfox-spring-web-2.9.2.TSF-RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/buildenv/apache-maven-3.5.4/repository/io/springfox/springfox-spring-web/2.9.2.TSF-RELEASE/springfox-spring-web-2.9.2.TSF-RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/buildenv/apache-maven-3.5.4/repository/io/springfox/springfox-spring-web/2.9.2.TSF-RELEASE/springfox-spring-web-2.9.2.TSF-RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
