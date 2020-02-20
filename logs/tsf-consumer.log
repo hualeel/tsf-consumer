@@ -42,3 +42,283 @@ java.lang.IllegalStateException: Shutdown in progress
 	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 
+2020-02-20 17:21:11.465  INFO [tsf-consumer,,,] 33633 --- [restartedMain] .h.t.t.TsfSpringCloudConsumerApplication : No active profile set, falling back to default profiles: default
+2020-02-20 17:21:15.829  WARN [tsf-consumer,,,] 33633 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-02-20 17:21:17.176  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=10fded52-d925-3612-8715-a9d995a5aeb0
+2020-02-20 17:21:17.280  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'com.tencent.tsf.sleuth.instrument.jdbc.TraceJdbcAutoConfigration' of type [com.tencent.tsf.sleuth.instrument.jdbc.TraceJdbcAutoConfigration$$EnhancerBySpringCGLIB$$d9ee2d63] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.291  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'com.tencent.tsf.sleuth.config.TsfTracingAutoConfiguration' of type [com.tencent.tsf.sleuth.config.TsfTracingAutoConfiguration$$EnhancerBySpringCGLIB$$a9091fa3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.437  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spanAdjuster' of type [com.tencent.tsf.sleuth.adjuster.TsfTracingSpanAdjuster] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.509  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.sleuth.log.SleuthLogAutoConfiguration$Slf4jConfiguration' of type [org.springframework.cloud.sleuth.log.SleuthLogAutoConfiguration$Slf4jConfiguration$$EnhancerBySpringCGLIB$$2a36e60b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.535  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.sleuth-org.springframework.cloud.sleuth.autoconfig.SleuthProperties' of type [org.springframework.cloud.sleuth.autoconfig.SleuthProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.544  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.sleuth.log.slf4j-org.springframework.cloud.sleuth.log.SleuthSlf4jProperties' of type [org.springframework.cloud.sleuth.log.SleuthSlf4jProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.566  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'slf4jSpanDecorator' of type [org.springframework.cloud.sleuth.log.Slf4jScopeDecorator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.571  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.sleuth.autoconfig.TraceAutoConfiguration' of type [org.springframework.cloud.sleuth.autoconfig.TraceAutoConfiguration$$EnhancerBySpringCGLIB$$dccbdc3d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.612  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sleuthPropagation' of type [brave.propagation.B3Propagation$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.627  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sleuthCurrentTraceContextBuilder' of type [brave.propagation.ThreadLocalCurrentTraceContext$Builder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.630  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sleuthCurrentTraceContext' of type [brave.propagation.ThreadLocalCurrentTraceContext] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.673  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'scopedTarget.com.tencent.tsf.sleuth.config.TsfTracingConfiguration' of type [com.tencent.tsf.sleuth.config.TsfTracingConfiguration$$EnhancerBySpringCGLIB$$25ef9272] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.698  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sleuthTraceSampler' of type [brave.sampler.Sampler$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.729  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'errorParser' of type [brave.ErrorParser] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.756  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sender' of type [com.tencent.tsf.sleuth.sender.TsfTracingSender] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.789  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spanReporter' of type [zipkin2.reporter.AsyncReporter$BoundedAsyncReporter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:17.813  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tracing' of type [brave.Tracing$Default] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.681  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$bfe8c227] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.711  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.consul.config.ConsulConfigAutoConfiguration$ConsulRefreshConfiguration' of type [org.springframework.cloud.consul.config.ConsulConfigAutoConfiguration$ConsulRefreshConfiguration$$EnhancerBySpringCGLIB$$b9da0d3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.759  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.tsf.circuitbreaker.config.TsfCircuitBreakerFilterAutoConfiguration$TsfCircuitBreakerAsyncRestTemplateConfig' of type [org.springframework.cloud.tsf.circuitbreaker.config.TsfCircuitBreakerFilterAutoConfiguration$TsfCircuitBreakerAsyncRestTemplateConfig$$EnhancerBySpringCGLIB$$656e4468] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.773  INFO [tsf-consumer,,,] 33633 --- [restartedMain] rcuitBreakerAsyncRestTemplateInterceptor : [TSF CIRCUIT BREAKER INTERCEPTOR] TsfCircuitBreakerAsyncRestTemplateInterceptor registered.
+2020-02-20 17:21:18.775  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tsfCircuitBreakerAsyncRestTemplateInterceptor' of type [org.springframework.cloud.tsf.circuitbreaker.instrument.async.TsfCircuitBreakerAsyncRestTemplateInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.783  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tsfSpringCloudConsumerApplication' of type [com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.TsfSpringCloudConsumerApplication$$EnhancerBySpringCGLIB$$db93c006] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.804  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'asyncRestTemplate' of type [org.springframework.web.client.AsyncRestTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.842  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.tsf.circuitbreaker.config.TsfCircuitBreakerFilterAutoConfiguration$TsfCircuitBreakerRestTemplateConfig' of type [org.springframework.cloud.tsf.circuitbreaker.config.TsfCircuitBreakerFilterAutoConfiguration$TsfCircuitBreakerRestTemplateConfig$$EnhancerBySpringCGLIB$$6077652] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.851  INFO [tsf-consumer,,,] 33633 --- [restartedMain] TsfCircuitBreakerRestTemplateInterceptor : [TSF CIRCUIT BREAKER INTERCEPTOR] TsfCircuitBreakerRestTemplateInterceptor registered.
+2020-02-20 17:21:18.852  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tsfCircuitBreakerRestTemplateInterceptor' of type [org.springframework.cloud.tsf.circuitbreaker.instrument.rest.TsfCircuitBreakerRestTemplateInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.866  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'restTemplate' of type [org.springframework.web.client.RestTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.925  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tsf.circuit-breaker-org.springframework.cloud.tsf.circuitbreaker.config.CircuitBreakerRuleProperties' of type [org.springframework.cloud.tsf.circuitbreaker.config.CircuitBreakerRuleProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.929  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.tsf.circuitbreaker.config.TsfCircuitBreakerFilterAutoConfiguration' of type [org.springframework.cloud.tsf.circuitbreaker.config.TsfCircuitBreakerFilterAutoConfiguration$$EnhancerBySpringCGLIB$$5eedd47c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.952  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.tsf.route.config.TsfRouteFilterAutoConfiguration$TsfRouteAsyncRestTemplateConfig' of type [org.springframework.cloud.tsf.route.config.TsfRouteFilterAutoConfiguration$TsfRouteAsyncRestTemplateConfig$$EnhancerBySpringCGLIB$$e0b080e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.980  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tsfRouteAsyncRestTemplateInterceptor' of type [org.springframework.cloud.tsf.route.interceptor.TsfRouteAsyncRestTemplateInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:18.992  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.tsf.route.config.TsfRouteFilterAutoConfiguration$TsfRouteRestTemplateConfig' of type [org.springframework.cloud.tsf.route.config.TsfRouteFilterAutoConfiguration$TsfRouteRestTemplateConfig$$EnhancerBySpringCGLIB$$2b1bd598] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:19.007  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tsfRouteRestTemplateInterceptor' of type [org.springframework.cloud.tsf.route.interceptor.TsfRouteRestTemplateInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:19.016  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.tsf.route.config.TsfRouteFilterAutoConfiguration' of type [org.springframework.cloud.tsf.route.config.TsfRouteFilterAutoConfiguration$$EnhancerBySpringCGLIB$$1d38811c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:19.025  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.tsf.core.config.ContextConfiguration$TsfAsyncRestTemplateConfig' of type [org.springframework.tsf.core.config.ContextConfiguration$TsfAsyncRestTemplateConfig$$EnhancerBySpringCGLIB$$affadf46] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:19.046  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.tsf.core.entity.Metadata' of type [org.springframework.tsf.core.entity.Metadata$$EnhancerBySpringCGLIB$$736baba8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:19.052  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tsfAsyncRestTemplateInterceptor' of type [org.springframework.tsf.core.filter.TsfAsyncRestTemplateInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:19.069  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.tsf.core.config.ContextConfiguration$TsfRestTemplateConfig' of type [org.springframework.tsf.core.config.ContextConfiguration$TsfRestTemplateConfig$$EnhancerBySpringCGLIB$$85e108b4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:19.082  INFO [tsf-consumer,,,] 33633 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tsfRestTemplateInterceptor' of type [org.springframework.tsf.core.filter.TsfRestTemplateInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-20 17:21:19.910  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18083 (http)
+2020-02-20 17:21:19.957  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-20 17:21:19.958  INFO [tsf-consumer,,,] 33633 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-02-20 17:21:20.189  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-20 17:21:20.189  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8540 ms
+2020-02-20 17:21:20.522  WARN [tsf-consumer,,,] 33633 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-02-20 17:21:20.522  INFO [tsf-consumer,,,] 33633 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-02-20 17:21:20.533  INFO [tsf-consumer,,,] 33633 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@2f769d97
+2020-02-20 17:21:22.681  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-20 17:21:22.945  INFO [tsf-consumer,,,] 33633 --- [restartedMain] .i.f.TsfCircuitBreakerFeignClientWrapper : [TSF CIRCUIT BREAKER INTERCEPTOR] TsfCircuitBreakerFeignClientWrapper wrapped client:org.springframework.cloud.sleuth.instrument.web.client.feign.TraceLoadBalancerFeignClient@75979932. 
+2020-02-20 17:21:22.953  INFO [tsf-consumer,,,] 33633 --- [restartedMain] .s.c.t.r.i.f.TsfRouterFeignClientWrapper : [TSF ROUTER] TsfRouterFeignClientWrapper wrapped client:org.springframework.cloud.tsf.circuitbreaker.instrument.feign.TsfCircuitBreakerFeignClientWrapper@42e5d874. 
+2020-02-20 17:21:23.731  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-20 17:21:23.994  WARN [tsf-consumer,,,] 33633 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-02-20 17:21:23.995  INFO [tsf-consumer,,,] 33633 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-02-20 17:21:24.373  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-20 17:21:24.625  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-02-20 17:21:24.625  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'tsfInvocationExecutor'
+2020-02-20 17:21:24.652 ERROR [tsf-consumer,,,] 33633 --- [restartedMain] .t.t.m.i.r.InvocationStatReporterManager : set tsf monitor invocation log error, message: [/data/tsf_apm/monitor/logs/invocation_log0.log.0.lck]
+2020-02-20 17:21:24.765  INFO [tsf-consumer,,,] 33633 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-20 17:21:24.796  INFO [tsf-consumer,,,] 33633 --- [restartedMain] c.t.t.s.a.TsfSwaggerAutoConfiguration    : [tsf-swagger] application main class:com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.TsfSpringCloudConsumerApplication, auto detect swagger scan package:com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer 
+2020-02-20 17:21:24.909  WARN [tsf-consumer,,,] 33633 --- [restartedMain] o.s.b.a.i.InfluxDbAutoConfiguration      : InfluxDB client customizations using a OkHttpClient.Builder is deprecated, register a InfluxDbOkHttpClientBuilderProvider bean instead
+2020-02-20 17:21:25.287  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-02-20 17:21:25.529  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'configWatchTaskScheduler'
+2020-02-20 17:21:25.546  WARN [tsf-consumer,,,] 33633 --- [restartedMain] o.s.c.n.core.CoreAutoConfiguration       : This module is deprecated. It will be removed in the next major release. Please use spring-cloud-netflix-hystrix instead.
+2020-02-20 17:21:25.651  INFO [tsf-consumer,,,] 33633 --- [restartedMain] .c.c.TsfCircuitBreakerEventConfiguration : [TSF CIRCUIT BREAKER EVENT] TsfCircuitBreakerStatsTransmitEvent registered.
+2020-02-20 17:21:25.700  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'tsfTaskScheduler'
+2020-02-20 17:21:25.720  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.c.t.route.sync.TsfRouteRuleManager   : add tsf route rule schedule, namespaceId=
+2020-02-20 17:21:25.734  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.c.t.r.sync.TsfRouteAffinityManager   : add tsf route affinity schedule, namespaceId=
+2020-02-20 17:21:25.824  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-02-20 17:21:25.826  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'tsfThreadPoolTaskExecutor'
+2020-02-20 17:21:26.048  INFO [tsf-consumer,,,] 33633 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-02-20 17:21:26.098  INFO [tsf-consumer,,,] 33633 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-02-20 17:21:26.179  INFO [tsf-consumer,,,] 33633 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-02-20 17:21:26.285 ERROR [tsf-consumer,,,] 33633 --- [restartedMain] s.d.s.web.scanners.ApiDescriptionReader  : Skipping process path[/echo-async-rest/{str}], method[asyncRest] as it has an error.
+
+com.google.common.util.concurrent.ExecutionError: java.lang.NoSuchMethodError: com.google.common.collect.FluentIterable.from([Ljava/lang/Object;)Lcom/google/common/collect/FluentIterable;
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2205) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3957) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4875) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4881) ~[guava-19.0.jar:na]
+	at springfox.documentation.spring.web.scanners.CachingOperationReader.read(CachingOperationReader.java:57) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.ApiDescriptionReader.read(ApiDescriptionReader.java:70) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.ApiListingScanner.scan(ApiListingScanner.java:134) [springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.ApiDocumentationScanner.scan(ApiDocumentationScanner.java:71) [springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.scanDocumentation(DocumentationPluginsBootstrapper.java:101) [springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:167) [springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:893) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:161) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.TsfSpringCloudConsumerApplication.main(TsfSpringCloudConsumerApplication.java:31) [classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+Caused by: java.lang.NoSuchMethodError: com.google.common.collect.FluentIterable.from([Ljava/lang/Object;)Lcom/google/common/collect/FluentIterable;
+	at springfox.documentation.swagger.readers.operation.OperationAuthReader.authorizationReferences(OperationAuthReader.java:117) ~[springfox-swagger-common-2.9.2.jar:null]
+	at springfox.documentation.swagger.readers.operation.OperationAuthReader.apply(OperationAuthReader.java:73) ~[springfox-swagger-common-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsManager.operation(DocumentationPluginsManager.java:120) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.readers.operation.ApiOperationReader.read(ApiOperationReader.java:77) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.CachingOperationReader$1.load(CachingOperationReader.java:50) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.CachingOperationReader$1.load(CachingOperationReader.java:48) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3542) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2323) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2286) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201) ~[guava-19.0.jar:na]
+	... 30 common frames omitted
+
+2020-02-20 17:21:26.291 ERROR [tsf-consumer,,,] 33633 --- [restartedMain] s.d.s.web.scanners.ApiDescriptionReader  : Skipping process path[/echo-feign/{str}], method[feign] as it has an error.
+
+com.google.common.util.concurrent.ExecutionError: java.lang.NoSuchMethodError: com.google.common.collect.FluentIterable.from([Ljava/lang/Object;)Lcom/google/common/collect/FluentIterable;
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2205) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3957) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4875) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4881) ~[guava-19.0.jar:na]
+	at springfox.documentation.spring.web.scanners.CachingOperationReader.read(CachingOperationReader.java:57) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.ApiDescriptionReader.read(ApiDescriptionReader.java:70) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.ApiListingScanner.scan(ApiListingScanner.java:134) [springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.ApiDocumentationScanner.scan(ApiDocumentationScanner.java:71) [springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.scanDocumentation(DocumentationPluginsBootstrapper.java:101) [springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:167) [springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:893) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:161) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.TsfSpringCloudConsumerApplication.main(TsfSpringCloudConsumerApplication.java:31) [classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+Caused by: java.lang.NoSuchMethodError: com.google.common.collect.FluentIterable.from([Ljava/lang/Object;)Lcom/google/common/collect/FluentIterable;
+	at springfox.documentation.swagger.readers.operation.OperationAuthReader.authorizationReferences(OperationAuthReader.java:117) ~[springfox-swagger-common-2.9.2.jar:null]
+	at springfox.documentation.swagger.readers.operation.OperationAuthReader.apply(OperationAuthReader.java:73) ~[springfox-swagger-common-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsManager.operation(DocumentationPluginsManager.java:120) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.readers.operation.ApiOperationReader.read(ApiOperationReader.java:77) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.CachingOperationReader$1.load(CachingOperationReader.java:50) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.CachingOperationReader$1.load(CachingOperationReader.java:48) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3542) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2323) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2286) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201) ~[guava-19.0.jar:na]
+	... 30 common frames omitted
+
+2020-02-20 17:21:26.297 ERROR [tsf-consumer,,,] 33633 --- [restartedMain] s.d.s.web.scanners.ApiDescriptionReader  : Skipping process path[/echo-rest/{str}], method[rest] as it has an error.
+
+com.google.common.util.concurrent.ExecutionError: java.lang.NoSuchMethodError: com.google.common.collect.FluentIterable.from([Ljava/lang/Object;)Lcom/google/common/collect/FluentIterable;
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2205) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3957) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4875) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4881) ~[guava-19.0.jar:na]
+	at springfox.documentation.spring.web.scanners.CachingOperationReader.read(CachingOperationReader.java:57) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.ApiDescriptionReader.read(ApiDescriptionReader.java:70) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.ApiListingScanner.scan(ApiListingScanner.java:134) [springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.ApiDocumentationScanner.scan(ApiDocumentationScanner.java:71) [springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.scanDocumentation(DocumentationPluginsBootstrapper.java:101) [springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:167) [springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:893) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:161) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.TsfSpringCloudConsumerApplication.main(TsfSpringCloudConsumerApplication.java:31) [classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+Caused by: java.lang.NoSuchMethodError: com.google.common.collect.FluentIterable.from([Ljava/lang/Object;)Lcom/google/common/collect/FluentIterable;
+	at springfox.documentation.swagger.readers.operation.OperationAuthReader.authorizationReferences(OperationAuthReader.java:117) ~[springfox-swagger-common-2.9.2.jar:null]
+	at springfox.documentation.swagger.readers.operation.OperationAuthReader.apply(OperationAuthReader.java:73) ~[springfox-swagger-common-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsManager.operation(DocumentationPluginsManager.java:120) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.readers.operation.ApiOperationReader.read(ApiOperationReader.java:77) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.CachingOperationReader$1.load(CachingOperationReader.java:50) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at springfox.documentation.spring.web.scanners.CachingOperationReader$1.load(CachingOperationReader.java:48) ~[springfox-spring-web-2.9.2.TSF-RELEASE.jar:na]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3542) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2323) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2286) ~[guava-19.0.jar:na]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201) ~[guava-19.0.jar:na]
+	... 30 common frames omitted
+
+2020-02-20 17:21:26.366  INFO [tsf-consumer,,,] 33633 --- [restartedMain] c.t.tsf.swagger.TsfApiMetadataGrapher    : auto smart check application start with local consul, api registry not work
+2020-02-20 17:21:26.455  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18083 (http) with context path ''
+2020-02-20 17:21:26.475  INFO [tsf-consumer,,,] 33633 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='tsf-consumer-18083', name='tsf-consumer', tags=[secure=false], address='192.168.3.10', meta={TSF_INSTNACE_ID=, TSF_PROG_VERSION=, TSF_REGION=, TSF_ZONE=, TSF_GROUP_ID=, TSF_APPLICATION_ID=}, port=18083, enableTagOverride=null, check=Check{script='null', interval='null', ttl='30s', http='null', method='null', header=null, tcp='null', timeout='null', dockerContainerID='null', shell='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+2020-02-20 17:21:26.501  INFO [tsf-consumer,7a361e50ec42aed6,7a361e50ec42aed6,true] 33633 --- [tsf-schedule-0-T4] .c.t.c.r.TsfCircuitBreakerConsulKVLoader : [TSF CIRCUIT BREAKER LOADER] TSF circuit breaker loader start NEW round, circuitBreakerRuleIndex: 1
+2020-02-20 17:21:26.511  INFO [tsf-consumer,7a361e50ec42aed6,7a361e50ec42aed6,true] 33633 --- [tsf-schedule-0-T4] .c.t.c.r.TsfCircuitBreakerConsulKVLoader : [TSF CIRCUIT BREAKER LOADER] Index = 1, Start compare old and new rule.
+2020-02-20 17:21:26.604  INFO [tsf-consumer,,,] 33633 --- [restartedMain] .h.t.t.TsfSpringCloudConsumerApplication : Started TsfSpringCloudConsumerApplication in 20.438 seconds (JVM running for 23.499)
+2020-02-20 17:21:27.637  INFO [tsf-consumer,,,] 33633 --- [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-20 17:21:27.637  INFO [tsf-consumer,,,] 33633 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-20 17:21:27.697  INFO [tsf-consumer,,,] 33633 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 59 ms
+2020-02-20 17:24:08.940  INFO [tsf-consumer,4fb72172f8bae5c3,3e3a64cf18dd5a00,true] 33633 --- [http-nio-18083-exec-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-tsf-provider
+2020-02-20 17:24:08.943  INFO [tsf-consumer,4fb72172f8bae5c3,3e3a64cf18dd5a00,true] 33633 --- [http-nio-18083-exec-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: tsf-provider instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=tsf-provider,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-02-20 17:24:08.957  INFO [tsf-consumer,4fb72172f8bae5c3,3e3a64cf18dd5a00,true] 33633 --- [http-nio-18083-exec-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2020-02-20 17:24:09.069  INFO [tsf-consumer,4fb72172f8bae5c3,3e3a64cf18dd5a00,true] 33633 --- [http-nio-18083-exec-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client tsf-provider initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=tsf-provider,current list of Servers=[192.168.3.10:18081],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.3.10:18081;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:ConsulServerList{serviceId='tsf-provider', tag=null}
+2020-02-20 17:25:00.011  INFO [tsf-consumer,523bba54f573e67d,d963d9b5fc490266,true] 33633 --- [tsf-schedule-0-T7] c.t.t.m.i.r.InvocationStatReporter       : {"category":"MS","kind":"SERVER","timestamp":1582190640,"period":60,"local":{"service":"tsf-consumer","interface":"/echo-rest/aaa"},"invocation":{"sum_amount":1,"status_code":[{"code":"200","amount":1}],"status_serial":{"informational":0,"successful":1,"redirection":0,"client_error":0,"server_error":0,"connect_error":0,"timeout_error":0,"unavailable_error":0,"other_error":0},"duration":{"avg_ms":1093.42,"sum_ms":1093.42,"range_50_ms":0,"range_50_100_ms":0,"range_100_200_ms":0,"range_200_300_ms":0,"range_300_400_ms":0,"range_400_500_ms":0,"range_500_800_ms":0,"range_800_1200_ms":1,"range_1200_1600_ms":0,"range_1600_2000_ms":0,"range_2000_ms":0}}}
+2020-02-20 17:25:00.013  INFO [tsf-consumer,523bba54f573e67d,d963d9b5fc490266,true] 33633 --- [tsf-schedule-0-T7] c.t.t.m.i.r.InvocationStatReporter       : {"category":"MS","kind":"CLIENT","timestamp":1582190640,"period":60,"local":{"service":"tsf-consumer","interface":"/echo-rest/aaa"},"remote":{"service":"tsf-provider","interface":"/echo/aaa"},"invocation":{"sum_amount":1,"status_code":[{"code":"200","amount":1}],"status_serial":{"informational":0,"successful":1,"redirection":0,"client_error":0,"server_error":0,"connect_error":0,"timeout_error":0,"unavailable_error":0,"other_error":0},"duration":{"avg_ms":921.91,"sum_ms":921.91,"range_50_ms":0,"range_50_100_ms":0,"range_100_200_ms":0,"range_200_300_ms":0,"range_300_400_ms":0,"range_400_500_ms":0,"range_500_800_ms":0,"range_800_1200_ms":1,"range_1200_1600_ms":0,"range_1600_2000_ms":0,"range_2000_ms":0}}}
+2020-02-20 17:27:00.006  INFO [tsf-consumer,523bba54f573e67d,86eef3279878d4d9,true] 33633 --- [tsf-schedule-0-T6] c.t.t.m.i.r.InvocationStatReporter       : {"category":"MS","kind":"SERVER","timestamp":1582190760,"period":60,"local":{"service":"tsf-consumer","interface":"/echo-rest/aadfdf"},"invocation":{"sum_amount":1,"status_code":[{"code":"200","amount":1}],"status_serial":{"informational":0,"successful":1,"redirection":0,"client_error":0,"server_error":0,"connect_error":0,"timeout_error":0,"unavailable_error":0,"other_error":0},"duration":{"avg_ms":38.23,"sum_ms":38.23,"range_50_ms":1,"range_50_100_ms":0,"range_100_200_ms":0,"range_200_300_ms":0,"range_300_400_ms":0,"range_400_500_ms":0,"range_500_800_ms":0,"range_800_1200_ms":0,"range_1200_1600_ms":0,"range_1600_2000_ms":0,"range_2000_ms":0}}}
+2020-02-20 17:27:00.009  INFO [tsf-consumer,523bba54f573e67d,86eef3279878d4d9,true] 33633 --- [tsf-schedule-0-T6] c.t.t.m.i.r.InvocationStatReporter       : {"category":"MS","kind":"CLIENT","timestamp":1582190760,"period":60,"local":{"service":"tsf-consumer","interface":"/echo-rest/aadfdf"},"remote":{"service":"tsf-provider","interface":"/echo/aadfdf"},"invocation":{"sum_amount":1,"status_code":[{"code":"200","amount":1}],"status_serial":{"informational":0,"successful":1,"redirection":0,"client_error":0,"server_error":0,"connect_error":0,"timeout_error":0,"unavailable_error":0,"other_error":0},"duration":{"avg_ms":17.23,"sum_ms":17.23,"range_50_ms":1,"range_50_100_ms":0,"range_100_200_ms":0,"range_200_300_ms":0,"range_300_400_ms":0,"range_400_500_ms":0,"range_500_800_ms":0,"range_800_1200_ms":0,"range_1200_1600_ms":0,"range_1600_2000_ms":0,"range_2000_ms":0}}}
+2020-02-20 18:21:48.861  INFO [tsf-consumer,,,] 33633 --- [Thread-29] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2020-02-20 18:21:48.884  INFO [tsf-consumer,,,] 33633 --- [Thread-26] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'tsfThreadPoolTaskExecutor'
+2020-02-20 18:21:48.885  INFO [tsf-consumer,,,] 33633 --- [Thread-26] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'tsfTaskScheduler'
+2020-02-20 18:21:48.886  INFO [tsf-consumer,,,] 33633 --- [Thread-26] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'configWatchTaskScheduler'
+2020-02-20 18:21:48.887  INFO [tsf-consumer,,,] 33633 --- [Thread-26] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: tsf-consumer-18083
+2020-02-20 18:21:48.936  INFO [tsf-consumer,,,] 33633 --- [Thread-26] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'catalogWatchTaskScheduler'
+2020-02-20 18:21:48.939  INFO [tsf-consumer,,,] 33633 --- [Thread-26] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'tsfInvocationExecutor'
+2020-02-20 18:21:48.940  INFO [tsf-consumer,,,] 33633 --- [Thread-26] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-20 18:21:48.940 ERROR [tsf-consumer,,,] 33633 --- [tsf-invocation-thread-1] c.t.t.m.i.a.InvocationAggregator         : [TSF Monitor] AggregatorThread : [tsf-invocation-thread-1] Interrupted while sleeping 300ms
+2020-02-20 18:21:48.952  INFO [tsf-consumer,,,] 33633 --- [Thread-26] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-tsf-provider
+2020-02-20 18:21:48.954  INFO [tsf-consumer,,,] 33633 --- [Thread-26] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)
+
+java.lang.IllegalStateException: Shutdown in progress
+	at java.base/java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82) ~[na:na]
+	at java.base/java.lang.Runtime.removeShutdownHook(Runtime.java:247) ~[na:na]
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.3.0.jar:0.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1036) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1029) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:975) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92) [spring-cloud-context-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1036) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1029) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+
