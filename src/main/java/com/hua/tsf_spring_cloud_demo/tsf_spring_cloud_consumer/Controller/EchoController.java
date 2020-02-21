@@ -25,16 +25,22 @@ public class EchoController {
     @RequestMapping(value = "/echo-rest/{str}", method = RequestMethod.GET)
 //    @ApiOperation(value = "/echo-rest/{str}", notes = "consumer微服务，调用provider微服务，进行静态方式回显字符串，") // notes 对应 API 描述
     public String rest(@PathVariable String str,
-                       @RequestParam(required = false) String tagName,
-                       @RequestParam(required = false) String tagValue) {
+                       @RequestParam(value = "user", required = false) String userValue,
+                       @RequestParam(value = "org", required = false) String orgValue) {
 
 //        通过url传参设置自定义标签
-        if (!StringUtils.isEmpty(tagName)) {
-            TsfContext.putTag(tagName, tagValue);
-            TsfContext.putCustomMetadata(new CustomMetadata(tagName, tagValue));
+        if (!StringUtils.isEmpty(userValue)) {
+            TsfContext.putTag("user", userValue);
+            TsfContext.putCustomMetadata(new CustomMetadata("user", userValue));
+        }
+
+        if (!StringUtils.isEmpty(orgValue)) {
+            TsfContext.putTag("org", orgValue);
+            TsfContext.putCustomMetadata(new CustomMetadata("user", orgValue));
         }
 
         return restTemplate.getForObject("http://tsf-provider/echo/" + str, String.class);
+
     }
 
     //    /echo-async-rest/
