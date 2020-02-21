@@ -3,3 +3,6 @@ server:
 spring:
  application:
   name: tsf-consumer
+tsf:
+ swagger:
+  enabled: true
