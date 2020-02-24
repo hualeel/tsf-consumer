@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.tsf.core.TsfContext;
+import org.springframework.tsf.core.entity.Tag;
 import org.springframework.util.StringUtils;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.web.bind.annotation.*;
@@ -23,29 +24,22 @@ public class EchoController {
 
     //    /echo-rest/
     @RequestMapping(value = "/echo-rest/{str}", method = RequestMethod.GET)
-//    @ApiOperation(value = "/echo-rest/{str}", notes = "consumer微服务，调用provider微服务，进行静态方式回显字符串，") // notes 对应 API 描述
+    @ApiOperation(value = "/echo-rest/{str}", notes = "consumer微服务，调用provider微服务，进行静态方式回显字符串，") // notes 对应 API 描述
     public String rest(@PathVariable String str,
-                       @RequestParam(value = "user", required = false) String userValue,
-                       @RequestParam(value = "org", required = false) String orgValue) {
+                       @RequestParam(required = false) String userID) {
 
 //        通过url传参设置自定义标签
-        if (!StringUtils.isEmpty(userValue)) {
-            TsfContext.putTag("user", userValue);
-            TsfContext.putCustomMetadata(new CustomMetadata("user", userValue));
-        }
-
-        if (!StringUtils.isEmpty(orgValue)) {
-            TsfContext.putTag("org", orgValue);
-            TsfContext.putCustomMetadata(new CustomMetadata("user", orgValue));
+        if (!StringUtils.isEmpty(userID)) {
+            TsfContext.putTag("userID", userID);
+            TsfContext.putCustomMetadata(new CustomMetadata("userID", userID));
         }
 
         return restTemplate.getForObject("http://tsf-provider/echo/" + str, String.class);
-
     }
 
     //    /echo-async-rest/
     @RequestMapping(value = "/echo-async-rest/{str}", method = RequestMethod.GET)
-//    @ApiOperation(value = "/echo-async-rest/{str}", notes = "consumer微服务，调用provider微服务，进行动态方式回显字符串，") // notes 对应 API 描述
+    @ApiOperation(value = "/echo-async-rest/{str}", notes = "consumer微服务，调用provider微服务，进行动态方式回显字符串，") // notes 对应 API 描述
     public String asyncRest(@PathVariable String str) throws Exception {
         ListenableFuture<ResponseEntity<String>> future = asyncRestTemplate.getForEntity("http://tsf-provider/echo/" + str, String.class);
         return future.get().getBody();
@@ -53,7 +47,7 @@ public class EchoController {
 
     //    /echo-feign/
     @RequestMapping(value = "/echo-feign/{str}", method = RequestMethod.GET)
-//    @ApiOperation(value = "/echo-feign/{str}", notes = "consumer微服务，调用provider微服务，进行feign方式回显字符串，") // notes 对应 API 描述
+    @ApiOperation(value = "/echo-feign/{str}", notes = "consumer微服务，调用provider微服务，进行feign方式回显字符串，") // notes 对应 API 描述
     public String feign(@PathVariable String str) {
         return echoService.echo(str);
     }

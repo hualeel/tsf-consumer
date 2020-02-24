@@ -54,6 +54,21 @@
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
 
+        <!--解决@ApiOperation出错-->
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>28.2-jre</version>
+        </dependency>
+
+        <!--自定义标签-->
+        <dependency>
+            <groupId>com.tencent.tsf</groupId>
+            <artifactId>spring-cloud-tsf-core</artifactId>
+            <version>1.19.0-Greenwich-RELEASE</version>
+        </dependency>
+
     </dependencies>
 
     <build>
