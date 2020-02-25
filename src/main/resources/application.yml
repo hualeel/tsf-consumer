@@ -6,3 +6,13 @@ spring:
 tsf:
  swagger:
   enabled: true
+
+consumer:
+ config:
+  name: test12345
+
+#公共自定义配置
+global:
+ config:
+  name: 1234567
+

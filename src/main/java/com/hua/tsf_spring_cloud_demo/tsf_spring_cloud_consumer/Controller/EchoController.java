@@ -1,8 +1,12 @@
 package com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.Controller;
 
+import com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.Config.ConsumerConfig;
+import com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.Config.GlobalConfig;
 import com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.Entity.CustomMetadata;
 import com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.Interface.EchoService;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.tsf.core.TsfContext;
@@ -22,17 +26,45 @@ public class EchoController {
     @Autowired
     private EchoService echoService;
 
+    // log对象
+    private static final Logger LOG = LoggerFactory.getLogger(EchoController.class);
+
+    //   配置中心consumer.config
+    @Autowired
+    private ConsumerConfig consumerConfig;
+
+    //配置中心global.config
+    @Autowired
+    private GlobalConfig globalConfig;
+
     //    /echo-rest/
     @RequestMapping(value = "/echo-rest/{str}", method = RequestMethod.GET)
     @ApiOperation(value = "/echo-rest/{str}", notes = "consumer微服务，调用provider微服务，进行静态方式回显字符串，") // notes 对应 API 描述
     public String rest(@PathVariable String str,
                        @RequestParam(required = false) String userID) {
 
-//        通过url传参设置自定义标签
+        // 通过url传参设置自定义标签
         if (!StringUtils.isEmpty(userID)) {
             TsfContext.putTag("userID", userID);
             TsfContext.putCustomMetadata(new CustomMetadata("userID", userID));
         }
+
+        // 日志
+        LOG.info("tsf-consumer -- request param: [" + userID + "]");
+
+        // 设置application.yml consumer.config.name的值,传入的userID 为name的值
+        consumerConfig.setName("test" + userID);
+
+        //设置global.config.name的值，传入的userID为name的值
+        globalConfig.setName("test" + userID);
+
+
+        // 获取consumer.config.name的值
+        LOG.info("tsf-consumer -- consumer config name: [" + consumerConfig.getName() + ']');
+
+        //获取global.config.name的值
+        LOG.info("tsf-consumer -- global config name: [" + globalConfig.getName() + ']');
+
 
         return restTemplate.getForObject("http://tsf-provider/echo/" + str, String.class);
     }
