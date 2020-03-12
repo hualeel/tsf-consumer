@@ -4,10 +4,13 @@ import com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.Config.ConsumerCo
 import com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.Config.GlobalConfig;
 import com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.Entity.CustomMetadata;
 import com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer.Interface.EchoService;
+import feign.FeignException;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.tsf.faulttolerance.annotation.TsfFaultTolerance;
+import org.springframework.cloud.tsf.faulttolerance.model.TsfFaultToleranceStragety;
 import org.springframework.http.ResponseEntity;
 import org.springframework.tsf.core.TsfContext;
 import org.springframework.tsf.core.entity.Tag;
@@ -40,6 +43,10 @@ public class EchoController {
     //    /echo-rest/
     @RequestMapping(value = "/echo-rest/{str}", method = RequestMethod.GET)
     @ApiOperation(value = "/echo-rest/{str}", notes = "consumer微服务，调用provider微服务，进行静态方式回显字符串，") // notes 对应 API 描述
+    //容错
+    @TsfFaultTolerance(strategy = TsfFaultToleranceStragety.FAIL_OVER, parallelism = 2,
+            ignoreExceptions = {FeignException.class},
+            raisedExceptions = {RuntimeException.class, InterruptedException.class},fallbackMethod = "doWorkFallback")
     public String rest(@PathVariable String str,
                        @RequestParam(required = false) String userID) {
 
@@ -82,6 +89,12 @@ public class EchoController {
     @ApiOperation(value = "/echo-feign/{str}", notes = "consumer微服务，调用provider微服务，进行feign方式回显字符串，") // notes 对应 API 描述
     public String feign(@PathVariable String str) {
         return echoService.echo(str);
+    }
+
+    //容错处理程序
+    public void doWorkFallback() {
+        System.out.println("fallback");
+
     }
 
 }

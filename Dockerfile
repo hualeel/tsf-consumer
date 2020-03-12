@@ -16,8 +16,13 @@ WORKDIR ${workdir}
 # tsf-consul-template-docker 用于文件配置功能
 ADD tsf-consul-template-docker.tar.gz /root/
 
+#----没有日志--------
 # JAVA_OPTS 环境变量的值为部署组的 JVM 启动参数，在运行时 bash 替换。使用 exec 以使 Java 程序可以接收 SIGTERM 信号。
-CMD ["sh", "-ec", "sh /root/tsf-consul-template-docker/script/start.sh; exec java ${JAVA_OPTS} -jar ${jarfile_name}"]
+# CMD ["sh", "-ec", "sh /root/tsf-consul-template-docker/script/start.sh; exec java ${JAVA_OPTS} -jar ${jarfile_name}"]
 
 # 如果不需要使用文件配置功能，改用下面的启动命令
 # CMD ["sh", "-ec", "exec java ${JAVA_OPTS} -jar ${jar}"]
+
+#-------对于私有化的 TSF ，如果1.13 版本之前的版本要支持 stdout 日志，需要在启动命令中将 stdout 及 stderr 重定向到一个文件中
+RUN mkdir -p /data/tsf_std/stdout/logs
+CMD ["sh", "-ec", "exec java ${JAVA_OPTS} -jar ${jarfile_name} 2>&1 > /data/tsf_std/stdout/logs/sys_log.log"]

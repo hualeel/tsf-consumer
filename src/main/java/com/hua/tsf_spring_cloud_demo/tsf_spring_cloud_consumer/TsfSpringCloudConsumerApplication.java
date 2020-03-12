@@ -1,5 +1,6 @@
 package com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer;
 
+import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -12,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableFeignClients // 使用 Feign 微服务调用时请启用
 @EnableTsf
+//@EnableAdminServer
 
 public class TsfSpringCloudConsumerApplication {
 

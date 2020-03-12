@@ -67,7 +67,9 @@
             <groupId>com.tencent.tsf</groupId>
             <artifactId>spring-cloud-tsf-core</artifactId>
             <version>1.19.0-Greenwich-RELEASE</version>
+
         </dependency>
+
 
     </dependencies>
 
