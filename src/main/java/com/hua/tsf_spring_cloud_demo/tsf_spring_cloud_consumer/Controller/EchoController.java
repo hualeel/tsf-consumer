@@ -46,25 +46,28 @@ public class EchoController {
     //容错
     @TsfFaultTolerance(strategy = TsfFaultToleranceStragety.FAIL_OVER, parallelism = 2,
             ignoreExceptions = {FeignException.class},
-            raisedExceptions = {RuntimeException.class, InterruptedException.class},fallbackMethod = "doWorkFallback")
+            raisedExceptions = {RuntimeException.class, InterruptedException.class}, fallbackMethod = "doWorkFallback")
     public String rest(@PathVariable String str,
-                       @RequestParam(required = false) String userID) {
+                       @RequestParam(required = false) String tagName,
+                       @RequestParam(required = false) String tagValue,
+                       @RequestParam(required = false) String consumer_config_value,
+                       @RequestParam(required = false) String global_config_value) {
 
         // 通过url传参设置自定义标签
-        if (!StringUtils.isEmpty(userID)) {
-            TsfContext.putTag("userID", userID);
-            TsfContext.putCustomMetadata(new CustomMetadata("userID", userID));
+        if (!StringUtils.isEmpty(tagName)) {
+            TsfContext.putTag(tagName, tagValue);
+            TsfContext.putCustomMetadata(new CustomMetadata(tagName, tagValue));
         }
 
-        // 日志
-        LOG.info("tsf-consumer -- request param: [" + userID + "]");
+        // 设置application.yml consumer.config.name和global_config_value的值
+        consumerConfig.setName(consumer_config_value);
+        globalConfig.setName(global_config_value);
 
-        // 设置application.yml consumer.config.name的值,传入的userID 为name的值
-        consumerConfig.setName("test" + userID);
+        // 打印日志
+        LOG.info("tsf-consumer -- request param: [" + "tagName:" + tagName + "; tagValue:" + tagValue + "]");
 
-        //设置global.config.name的值，传入的userID为name的值
-        globalConfig.setName("test" + userID);
-
+//        LOG.info("tsf-consumer -- request param:[" + "consumer_config_value:" + consumer_config_value +
+//                "；global_config_value" + global_config_value + "]");
 
         // 获取consumer.config.name的值
         LOG.info("tsf-consumer -- consumer config name: [" + consumerConfig.getName() + ']');
@@ -74,6 +77,9 @@ public class EchoController {
 
 
         return restTemplate.getForObject("http://tsf-provider/echo/" + str, String.class);
+
+//        return "tagName=" + tagName + "; tagValue=" + tagValue;
+
     }
 
     //    /echo-async-rest/

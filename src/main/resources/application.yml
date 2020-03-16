@@ -10,7 +10,7 @@ tsf:
 
 consumer:
  config:
-  name: test12345
+  name: consumer_config_name_value_12345678
 
 feign:
  tsf:
@@ -19,6 +19,7 @@ feign:
 #公共自定义配置
 global:
  config:
-  name: 1234567
+  name: global_config_name_value12345678
+
 
 

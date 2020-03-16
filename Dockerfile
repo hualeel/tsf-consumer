@@ -25,4 +25,5 @@ ADD tsf-consul-template-docker.tar.gz /root/
 
 #-------对于私有化的 TSF ，如果1.13 版本之前的版本要支持 stdout 日志，需要在启动命令中将 stdout 及 stderr 重定向到一个文件中
 RUN mkdir -p /data/tsf_std/stdout/logs
+RUN mkdir -p /data/tsf_logs
 CMD ["sh", "-ec", "exec java ${JAVA_OPTS} -jar ${jarfile_name} 2>&1 > /data/tsf_std/stdout/logs/sys_log.log"]

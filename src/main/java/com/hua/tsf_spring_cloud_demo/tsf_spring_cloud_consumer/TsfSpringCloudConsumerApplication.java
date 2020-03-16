@@ -1,6 +1,5 @@
 package com.hua.tsf_spring_cloud_demo.tsf_spring_cloud_consumer;
 
-import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
